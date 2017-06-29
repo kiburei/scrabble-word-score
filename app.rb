@@ -9,6 +9,6 @@ require ('sinatra')
   end
 
   get('/scrabble_score') do
-    @word = params.fetch('word').word_score()
+    @word = params.fetch('word').upcase().word_score()
     erb(:scrabble)
   end
